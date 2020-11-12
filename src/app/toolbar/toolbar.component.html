@@ -1,0 +1,10 @@
+<div class="toolbar">
+    <img width="40" alt="Dino Logo" src="../assets/images/Dinologo.png" />
+    <span>Welcome to Dino-Fourm</span>
+    <span class="spacer"></span>
+    <div>
+      <h4 *ngIf="isLogedIn.state">hello {{ userInfo }}</h4>
+      <button (click)="redirectToLogin()" class="button">SignIn</button>
+    </div>
+  </div>
+  

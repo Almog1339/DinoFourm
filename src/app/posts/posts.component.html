@@ -1,0 +1,9 @@
+<div>
+    <form [formGroup]="postEditorForm" (ngSubmit)="submit(singlePost)" >
+        <div>
+            <label for="editor"><h2>Editor</h2></label>
+            <angular-editor formControlName="editor" [(ngModel)]="singlePost"  [config]="editorConfig"></angular-editor>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>

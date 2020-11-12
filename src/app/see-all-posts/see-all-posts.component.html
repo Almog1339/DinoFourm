@@ -1,0 +1,21 @@
+<div class="container">
+    <button (click)="navigateToHome()" class="button">Back To Home</button>
+    <div *ngFor="let post of allPosts">
+        <div class="post">
+            {{ post }}
+        </div>
+        <div class="comments" *ngFor="let comment of comments">
+            <label>{{comment}}</label>
+        </div>
+        <div>
+            <form class="form" [formGroup]="commentEditorForm" (ngSubmit)="submitComment()">
+                <div>
+                    <angular-editor formControlName="commentEditor" (keyup)="savePostData($event.target.innerText)"
+                        [config]="commentEditorConfig">
+                    </angular-editor>
+                </div>
+                <button type="submit">comment</button>
+            </form>
+        </div>
+    </div>
+</div>
